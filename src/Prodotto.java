@@ -23,5 +23,55 @@ public class Prodotto {
         return codRandom.nextInt(100000);
     }
 
-    //
+    //METODO PREZZO BASE
+    public double getPrezzoBase() {
+        return prezzo;
+    }
+
+    //METODO PREZZO CON IVA
+    public double getPrezzoIva(){
+        return prezzo + (prezzo * iva/100);
+    }
+
+    //METODO NOME/CODICE ESTESO
+    public String getNomeEsteso(){
+        return codice + "-" + nome;
+    }
+
+    //GET & SET
+    public int getCodice(){
+        return codice;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getDescrizione (){
+        return descrizione;
+    }
+
+    public void setDescrzione(String descrizione){
+        this.descrizione = descrizione;
+    }
+
+    public double getPrezzo(){
+        return prezzo;
+    }
+
+    public void setPrezzo(){
+        this.prezzo = prezzo;
+    }
+
+    public double getIva(){
+        return iva;
+    }
+
+    public void setIva(double iva){
+        this.iva = iva;
+    }
 }
