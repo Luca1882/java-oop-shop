@@ -12,15 +12,15 @@ public class Prodotto {
     public Prodotto(String nome, String descrizione, double prezzo, double iva){
         this.codice = generaCodice();
         this.nome = nome;
-        this.descrizione = descrizione;
         this.prezzo = prezzo;
         this.iva = iva;
+        this.descrizione = descrizione;
     }
 
-    //GENERO IL CODICE TRAMITE RANDOM (1-100000)
+    //GENERO IL CODICE TRAMITE RANDOM (1000-9999)
     private int generaCodice(){
         Random codRandom = new Random();
-        return codRandom.nextInt(100000);
+        return codRandom.nextInt(1000, 9999);
     }
 
     //METODO PREZZO BASE
@@ -30,7 +30,7 @@ public class Prodotto {
 
     //METODO PREZZO CON IVA
     public double getPrezzoIva(){
-        return prezzo + (prezzo * iva/100);
+        return prezzo + (prezzo * iva/100.0);
     }
 
     //METODO NOME/CODICE ESTESO
